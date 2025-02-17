@@ -1,0 +1,5 @@
+rootProject.name = 'arknova'
+
+include ':shared:domain'
+project(':shared:domain').projectDir= file('./src/shared/src/domain')
+

@@ -1,0 +1,16 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.arknova'
+version = '1'
+
+allprojects {
+    repositories {
+        mavenCentral()
+    }
+
+    subprojects {
+        apply plugin: 'java'
+    }
+}
