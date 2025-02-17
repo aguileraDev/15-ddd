@@ -11,6 +11,8 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/shared" />
             <option value="$PROJECT_DIR$/src/shared/src/domain" />
+            <option value="$PROJECT_DIR$/src/zoo_administrator/src/domain" />
+            <option value="$PROJECT_DIR$/zoo_administrator" />
           </set>
         </option>
       </GradleProjectSettings>

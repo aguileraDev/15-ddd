@@ -3,3 +3,7 @@ rootProject.name = 'arknova'
 include ':shared:domain'
 project(':shared:domain').projectDir= file('./src/shared/src/domain')
 
+include ':zoo_administrator:domain'
+project(':zoo_administrator:domain').projectDir = file('./src/zoo_administrator/src/domain')
+
+
