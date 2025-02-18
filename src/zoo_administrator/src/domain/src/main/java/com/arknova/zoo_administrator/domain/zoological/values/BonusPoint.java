@@ -3,16 +3,16 @@ package com.arknova.zoo_administrator.domain.zoological.values;
 import com.arknova.shared.domain.generic.IValueObject;
 import com.arknova.shared.domain.utils.Validators;
 
-public class Requirement implements IValueObject {
+public class BonusPoint implements IValueObject {
     private final Integer value;
 
-    private Requirement(final Integer value) {
+    private BonusPoint(final Integer value) {
         this.value = value;
         validate();
     }
 
-    public static Requirement of(final Integer value) {
-        return new Requirement(value);
+    public static BonusPoint of(final Integer value) {
+        return new BonusPoint(value);
     }
 
     @Override

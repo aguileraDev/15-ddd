@@ -4,6 +4,7 @@ import com.arknova.shared.domain.generic.Entity;
 import com.arknova.zoo_administrator.domain.zoological.values.AnimalId;
 import com.arknova.zoo_administrator.domain.zoological.values.Attractive;
 import com.arknova.zoo_administrator.domain.zoological.values.CurrencyCost;
+import com.arknova.zoo_administrator.domain.zoological.values.Level;
 import com.arknova.zoo_administrator.domain.zoological.values.Name;
 import com.arknova.zoo_administrator.domain.zoological.values.Region;
 import com.arknova.zoo_administrator.domain.zoological.values.Status;
@@ -12,6 +13,7 @@ import com.arknova.zoo_administrator.domain.zoological.values.Type;
 public class Animal extends Entity<AnimalId> {
 
     private Type type;
+    private Level level;
     private Name name;
     private Attractive attractive;
     private Region region;
@@ -19,24 +21,42 @@ public class Animal extends Entity<AnimalId> {
     private Status status;
 
 
-    public Animal(AnimalId identity, Type type, Name name, Attractive attractive, Region region, CurrencyCost currencyCost, Status status) {
+
+    public Animal(AnimalId identity, Type type, Level level, Name name, Attractive attractive, Region region, CurrencyCost currencyCost, Status status) {
         super(identity);
+        this.level = level;
         this.type = type;
         this.name = name;
         this.attractive = attractive;
         this.region = region;
         this.currencyCost = currencyCost;
         this.status = status;
+
     }
 
-    public Animal( Type type, Name name, Attractive attractive, Region region, CurrencyCost currencyCost, Status status) {
+    public Animal(Level level, Type type, Name name, Attractive attractive, Region region, CurrencyCost currencyCost, Status status) {
         super(new AnimalId());
+        this.level = level;
         this.type = type;
         this.name = name;
         this.attractive = attractive;
         this.region = region;
         this.currencyCost = currencyCost;
         this.status = status;
+
+    }
+
+
+
+    // region Getters and Setters
+
+
+    public Level getLevel() {
+        return level;
+    }
+
+    public void setLevel(Level level) {
+        this.level = level;
     }
 
     public Type getType() {
@@ -88,5 +108,6 @@ public class Animal extends Entity<AnimalId> {
 
     }
 
+    // endregion
 
 }

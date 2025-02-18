@@ -1,26 +1,43 @@
 package com.arknova.zoo_administrator.domain.zoological.events;
 
 import com.arknova.shared.domain.generic.DomainEvent;
+import com.arknova.zoo_administrator.domain.zoological.entities.Enclosure;
 
 public class OccupiedSpace extends DomainEvent {
-    private final Integer coordinateX;
-    private final Integer coordinateY;
+    private final String spaceId;
+    private final Enclosure enclosure;
+    private final Double coordinateX;
+    private final Double coordinateY;
+    private final Boolean hasBonus;
 
 
-    public OccupiedSpace(String spaceId, Integer coordinateX, Integer coordinateY) {
+    public OccupiedSpace(String spaceId, Enclosure enclosure, Double coordinateX, Double coordinateY, Boolean hasBonus) {
         super(EventsEnum.OCCUPIED_SPACE.name());
+        this.spaceId = spaceId;
+        this.enclosure = enclosure;
         this.coordinateX = coordinateX;
         this.coordinateY = coordinateY;
+        this.hasBonus = hasBonus;
 
     }
 
-    public Integer getCoordinateX() {
+    public String getSpaceId() {
+        return spaceId;
+    }
+
+    public Double getCoordinateX() {
         return coordinateX;
     }
 
-    public Integer getCoordinateY() {
+    public Double getCoordinateY() {
         return coordinateY;
     }
 
+    public Enclosure getEnclosure() {
+        return enclosure;
+    }
 
+    public Boolean getHasBonus() {
+        return hasBonus;
+    }
 }

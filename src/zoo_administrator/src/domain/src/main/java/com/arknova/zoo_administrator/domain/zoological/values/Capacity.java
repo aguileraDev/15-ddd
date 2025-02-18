@@ -3,16 +3,16 @@ package com.arknova.zoo_administrator.domain.zoological.values;
 import com.arknova.shared.domain.generic.IValueObject;
 import com.arknova.shared.domain.utils.Validators;
 
-public class Requirement implements IValueObject {
+public class Capacity implements IValueObject {
     private final Integer value;
 
-    private Requirement(final Integer value) {
+    private Capacity(final Integer value) {
         this.value = value;
         validate();
     }
 
-    public static Requirement of(final Integer value) {
-        return new Requirement(value);
+    public static Capacity of(final Integer value) {
+        return new Capacity(value);
     }
 
     @Override

@@ -23,6 +23,7 @@ public class Coordinate implements IValueObject {
         Validators.validateValueGreaterThanZero(positionY);
     }
 
+
     public Double getPositionX() {
         return positionX;
     }

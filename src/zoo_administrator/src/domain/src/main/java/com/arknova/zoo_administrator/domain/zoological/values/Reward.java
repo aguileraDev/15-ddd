@@ -4,7 +4,6 @@ import com.arknova.shared.domain.generic.IValueObject;
 import com.arknova.shared.domain.utils.Validators;
 
 public class Reward implements IValueObject {
-
     private final String value;
 
     private Reward(final String value) {

@@ -3,24 +3,24 @@ package com.arknova.zoo_administrator.domain.zoological.values;
 import com.arknova.shared.domain.generic.IValueObject;
 import com.arknova.shared.domain.utils.Validators;
 
-public class Description implements IValueObject {
-    private final String value;
+public class IsOccupied implements IValueObject {
+    private final Boolean value;
 
-    private Description(final String value) {
+    private IsOccupied(final Boolean value) {
         this.value = value;
         validate();
     }
 
-    public static Description of(final String value) {
-        return new Description(value);
+    public static IsOccupied of(final Boolean value) {
+        return new IsOccupied(value);
     }
 
     @Override
     public void validate() {
-        Validators.validateTextNotEmptyOrBlank(value);
+        Validators.validateNotNull(value);
     }
 
-    public String getValue() {
+    public Boolean getValue() {
         return value;
     }
 }

@@ -4,23 +4,23 @@ import com.arknova.shared.domain.generic.IValueObject;
 import com.arknova.shared.domain.utils.Validators;
 
 public class Attractive implements IValueObject {
-    private final Double value;
+    private final Integer value;
 
-    private Attractive(final Double value) {
+    private Attractive(final Integer value) {
         this.value = value;
         validate();
     }
 
-    public static Attractive of(final Double value) {
+    public static Attractive of(final Integer value) {
         return new Attractive(value);
     }
 
     @Override
     public void validate() {
-        Validators.validateValueGreaterThanZero(value);
+        Validators.validateValueGreaterThanZero(Double.valueOf(value));
     }
 
-    public Double getValue() {
+    public Integer getValue() {
         return value;
     }
 
